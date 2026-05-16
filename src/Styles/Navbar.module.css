@@ -1,0 +1,28 @@
+.Container{
+    max-width: 1300px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo img{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.navlinks{
+    display: flex;
+    gap: 20px;  
+    list-style: none;
+    justify-content: space-around;
+}
+
+.navlinks li{
+font-weight: 500;
+}
