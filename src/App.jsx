@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Review from './Components/Review'
+import FAQ from './Components/FAQ'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Review/>
+    {/* <Review/> */}
+    {/* <FAQ/> */}
     {/* <Footer/> */}
     </>
   )
