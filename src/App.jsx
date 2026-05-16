@@ -13,8 +13,8 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Review/>
     <FAQ/>
+    <Review/>
     <CareerLinks/>
     <Footer/>
     </>

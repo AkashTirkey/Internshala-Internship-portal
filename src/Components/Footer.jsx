@@ -51,10 +51,11 @@ const Footer = () => {
 
         {/* Google play images */}
         <div className={Styles.download}>
-          <img src={Gplay} alt="GooglePlay" />
-          <img src={AppStore} alt="AppStore" />
+          <div className={Styles.downloadApps}>
+            <img src={Gplay} alt="GooglePlay" />
+            <img src={AppStore} alt="AppStore" />
+          </div>
 
-          {/* Social Media Icons */}
           <div className={Styles.social}>
             <img src={ig} alt="Instagram" />
             <img src={x} alt="X" />
@@ -64,7 +65,9 @@ const Footer = () => {
         </div>
 
         <div className={Styles.copyright}>
-            <p>©Copyright 2026 Internshala (Scholiverse Educare Private Limited)</p>
+          <p>
+            ©Copyright 2026 Internshala (Scholiverse Educare Private Limited)
+          </p>
         </div>
       </div>
     </div>

@@ -1,17 +1,54 @@
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #eef6ff;
+.wrapper {
+  width: 100%;
+  background-color: #eef6ff;
+  padding: 50px 20px;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+
+  background-color: #eef6ff;
+}
+.promotional {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+}
+.promotional h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.promotional p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.promotional h3 {
+  font-size: 40px;
+  color: #00a5ec;
+  margin-bottom: 15px;
+}
+
+.promotional img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
 .review {
+  flex: 2;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin-top: 30px;
 }
 .card {
   background: white;
@@ -55,9 +92,13 @@
   line-height: 1.6;
 }
 
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
 
-.promotional img{
-    width: 100px;
-    height: 50px;
-    object-fit: contain;
+  .review {
+    grid-template-columns: 1fr;
+  }
 }
