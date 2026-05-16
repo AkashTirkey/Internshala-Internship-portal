@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Review from './Components/Review'
 import FAQ from './Components/FAQ'
+import CareerLinks from './Components/CareerLinks'
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
   return (
     <>
     <Navbar/>
-    {/* <Review/> */}
-    {/* <FAQ/> */}
-    {/* <Footer/> */}
+    <Review/>
+    <FAQ/>
+    <CareerLinks/>
+    <Footer/>
     </>
   )
 }
