@@ -24,6 +24,7 @@
   padding: 18px;
   background: white;
   transition: 0.3s ease;
+  overflow: hidden;
 }
 
 .questionSection {
@@ -31,11 +32,16 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  gap: 15px;
 }
 
 .questionSection h3 {
   font-size: 18px;
   margin: 0;
+
+  flex: 1;
+
+  word-break: break-word;
 }
 
 .arrow {
@@ -51,4 +57,23 @@
   margin-top: 14px;
   color: #555;
   line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .questionSection h3 {
+    font-size: 16px;
+  }
+
+  .answer {
+    font-size: 14px;
+  }
 }

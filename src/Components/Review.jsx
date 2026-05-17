@@ -51,7 +51,10 @@ const Review = () => {
             Join the pool of 21Mn+ students and get started with your career
           </h2>
           <p>PLAY STORE RATING</p>
-          <h3>4.4</h3>
+         <div className={Styles.rating}>
+  <h3>4.4</h3>
+  <span>⭐⭐⭐⭐☆</span>
+</div>
           <img src={Gplay} alt="Google Play" />
         </div>
 
