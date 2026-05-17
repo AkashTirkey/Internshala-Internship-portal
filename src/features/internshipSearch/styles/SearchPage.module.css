@@ -1,0 +1,32 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.filters {
+  width: 280px;
+  position: sticky;
+  top: 90px;
+}
+
+.list {
+  flex: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    position: static;
+  }
+}
