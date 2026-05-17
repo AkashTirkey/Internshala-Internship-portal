@@ -111,17 +111,21 @@ const SearchPage = () => {
 
       <div className={Styles.list}>
 
-        {loading ? (
-          <h2>Loading internships...</h2>
-        ) : filteredInternships.length > 0 ? (
-          <InternshipList
-            internships={filteredInternships}
-          />
-        ) : (
-          <h2>No internships found</h2>
-        )}
+  {!loading && (
+    <h2 className={Styles.total}>
+      {filteredInternships.length} Total Internships
+    </h2>
+  )}
 
-      </div>
+  {loading ? (
+    <h2>Loading internships...</h2>
+  ) : filteredInternships.length > 0 ? (
+    <InternshipList internships={filteredInternships} />
+  ) : (
+    <h2>No internships found</h2>
+  )}
+
+</div>
     </div>
   );
 };

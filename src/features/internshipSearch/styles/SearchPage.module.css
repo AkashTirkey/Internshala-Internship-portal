@@ -17,6 +17,12 @@
 .list {
   flex: 1;
 }
+.total {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
 
 /* RESPONSIVE */
 
