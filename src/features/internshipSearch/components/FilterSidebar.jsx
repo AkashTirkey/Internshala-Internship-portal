@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Styles from "../styles/FilterSidebar.module.css";
 
-const FilterSidebar = ({ filters, setFilters }) => {
+const FilterSidebar = ({ filters, setFilters,profileOptions, locationOptions }) => {
+
+  const [showProfile, setShowProfile] = useState(false);
+  const [showLocation, setShowLocation] = useState(false);
   return (
     <div className={Styles.sidebar}>
 
@@ -8,31 +12,85 @@ const FilterSidebar = ({ filters, setFilters }) => {
 
       {/* Profile */}
 
-      <input
-        type="text"
-        placeholder="Profile"
-        value={filters.profile}
-        onChange={(e) =>
-          setFilters({
-            ...filters,
-            profile: e.target.value,
-          })
-        }
-      />
+      <div className={Styles.inputBox}>
+  <input
+    type="text"
+    placeholder="Profile"
+    value={filters.profile}
+    onClick={() => setShowProfile(true)}
+    onChange={(e) =>
+      setFilters({
+        ...filters,
+        profile: e.target.value,
+      })
+    }
+  />
+
+  {showProfile && (
+    <ul className={Styles.dropdown}>
+      {profileOptions
+        ?.filter((item) =>
+          item.toLowerCase().includes(filters.profile.toLowerCase())
+        )
+        .slice(0, 8)
+        .map((item, idx) => (
+          <li
+            key={idx}
+            onClick={() => {
+              setFilters({
+                ...filters,
+                profile: item,
+              });
+              setShowProfile(false);
+            }}
+          >
+            {item}
+          </li>
+        ))}
+    </ul>
+  )}
+</div>
 
       {/* Location */}
 
-      <input
-        type="text"
-        placeholder="Location"
-        value={filters.location}
-        onChange={(e) =>
-          setFilters({
-            ...filters,
-            location: e.target.value,
-          })
-        }
-      />
+      <div className={Styles.inputBox}>
+  <input
+    type="text"
+    placeholder="Location"
+    value={filters.location}
+    onClick={() => setShowLocation(true)}
+    onChange={(e) =>
+      setFilters({
+        ...filters,
+        location: e.target.value,
+      })
+    }
+  />
+
+  {showLocation && (
+    <ul className={Styles.dropdown}>
+      {locationOptions
+        ?.filter((item) =>
+          item.toLowerCase().includes(filters.location.toLowerCase())
+        )
+        .slice(0, 8)
+        .map((item, idx) => (
+          <li
+            key={idx}
+            onClick={() => {
+              setFilters({
+                ...filters,
+                location: item,
+              });
+              setShowLocation(false);
+            }}
+          >
+            {item}
+          </li>
+        ))}
+    </ul>
+  )}
+</div>
 
       {/* Duration */}
 

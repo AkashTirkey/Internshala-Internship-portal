@@ -95,6 +95,16 @@ const SearchPage = () => {
 
   }, [filters, internships]);
 
+  const profileOptions = [
+  ...new Set(internships.map((item) => item.title).filter(Boolean)),
+];
+
+const locationOptions = [
+  ...new Set(
+    internships.flatMap((item) => item.location_names || [])
+  ),
+];
+
   return (
     <div className={Styles.wrapper}>
 
@@ -103,7 +113,10 @@ const SearchPage = () => {
       <div className={Styles.filters}>
         <FilterSidebar
           filters={filters}
-          setFilters={setFilters}
+          setFilters={setFilters} 
+          profileOptions={profileOptions}
+          locationOptions={locationOptions}
+
         />
       </div>
 
